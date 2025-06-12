@@ -5,5 +5,7 @@ public class GerarArquivoConquistasMergeSort {
         OrdenarConquistasMedioCaso.gerarArquivo();
         OrdenarConquistasMelhorCaso.gerarArquivo();
         OrdenarConquistasPiorCaso.gerarArquivo();
+
+        System.out.println("Ordenação do campo conquistas usando o merge sort concluída!");
     }
 }

@@ -5,5 +5,7 @@ public class GerarArquivoPrecosHeapSort {
         OrdenarPrecosHeapSortMedioCaso.gerarArquivo();
         OrdenarPrecosHeapSortMelhorCaso.gerarArquivo();
         OrdenarPrecosHeapSortPiorCaso.gerarArquivo();
+
+        System.out.println("Ordenação do campo preço usando o heap sort concluída!");
     }
 }

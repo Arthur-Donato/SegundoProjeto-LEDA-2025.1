@@ -5,5 +5,7 @@ public class GerarArquivoConquistasSelectionSort {
         OrdenarConquistasSelectionSort.gerarArquivo();
         OrdenarConquistasSelectionSortMelhorCaso.gerarArquivo();
         OrdenarConquistasSelectionSortPiorCaso.gerarArquivo();
+
+        System.out.println("Ordenação do campo conquistas usando o selection sort concluída!");
     }
 }

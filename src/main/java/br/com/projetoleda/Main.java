@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         
 
-        //GerarArquivoComDataFormatada.escrevendoArquivoComDatasFormatadas();
+        GerarArquivoComDataFormatada.escrevendoArquivoComDatasFormatadas();
         GerarArquivoLinux.escrevendoArquivoComSuporteLinux();
         GerarArquivoComSuporteParaLinguaPortuguesa.escrevendoArquivoComSuporteParaLinguaPortuguesa();
 

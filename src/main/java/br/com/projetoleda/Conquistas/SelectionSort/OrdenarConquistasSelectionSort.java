@@ -1,10 +1,13 @@
 package br.com.projetoleda.Conquistas.SelectionSort;
 
-import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Comparator;
 
+import br.com.projetoleda.EstruturasDeDados.ArvoreAVL;
+import br.com.projetoleda.EstruturasDeDados.Fila;
+import br.com.projetoleda.EstruturasDeDados.ListaDuplamenteEncadeada;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVPrinter;
@@ -14,51 +17,62 @@ public class OrdenarConquistasSelectionSort {
     private static final String caminhoArquivoParaSerLido = "./Dados/games_formated_release_data.csv";
     private static final String CAMINHO_ARQUIVO_GERADO = "./Dados/games_achievements_SelectionSort_medioCaso.csv";
     public static void gerarArquivo() {
-        
+
         try{
-            FileReader leitorDoArquivo = new FileReader(caminhoArquivoParaSerLido);
-            BufferedReader reader = new BufferedReader(leitorDoArquivo);
 
+            Comparator<CSVRecord> comparadorPorId = (record1, record2) -> {
+                String idStr1 = record1.get(0);
+                String idStr2 = record2.get(0);
 
-            int contadorLinhas = 0;
-            while(reader.readLine() != null){
-                contadorLinhas++;
-            }
+                Integer id1 = Integer.parseInt(idStr1.trim());
+                Integer id2 = Integer.parseInt(idStr2.trim());
 
-            leitorDoArquivo.close();
-            reader.close();
+                return id1.compareTo(id2);
+            };
 
             FileReader leitorFinal = new FileReader(caminhoArquivoParaSerLido);
             CSVPrinter escritorDeArquivo = new CSVPrinter(new FileWriter(CAMINHO_ARQUIVO_GERADO, true), CSVFormat.DEFAULT);
             CSVParser parser = CSVFormat.RFC4180.parse(leitorFinal);
-            
-            CSVRecord[] lista = new CSVRecord[contadorLinhas];
-            int[] conquistas = new int[contadorLinhas];
 
-            int i = 0;
+            ArvoreAVL<CSVRecord> arvore = new ArvoreAVL<>(comparadorPorId);
+
+
             for(CSVRecord record : parser) {
                 if(record.getRecordNumber() == 1){
                     escritorDeArquivo.printRecord(record);
                 }
                 else if(record.size() > 2){
-                    lista[i] = record;
-                    try{
-                        conquistas[i] = Integer.parseInt(record.get(26));
-                    } catch(Exception e ){
-                        conquistas[i] = 0;
-                    }
-                    
-                    i++;
+                    arvore.inserir(record);
                 }
-                
+
             }
-            
-            selectionSort(lista, conquistas, 0, lista.length - 1);
+
+            CSVRecord[] lista = arvore.toArray(CSVRecord.class);
+            int[] conquistas = new int[lista.length];
+            int i = 0;
 
             for(CSVRecord record : lista){
-                escritorDeArquivo.printRecord(record);
+                try{
+                    conquistas[i] = Integer.parseInt(record.get(26));
+                } catch(Exception e){
+                    conquistas[i] = 0;
+                }
+                i++;
+
             }
-            
+
+            selectionSort(lista, conquistas, 0, lista.length - 1);
+
+            Fila<CSVRecord> filaEscrita = new Fila<>(lista.length);
+
+            for(int j = 0; j < lista.length; j++){
+                filaEscrita.enfileirar(lista[j]);
+            }
+
+            for(int k = 0; k < filaEscrita.getQuantidadeDeElementos(); k++){
+                escritorDeArquivo.printRecord(filaEscrita.desenfileirar());
+            }
+
             escritorDeArquivo.flush();
             escritorDeArquivo.close();
             leitorFinal.close();

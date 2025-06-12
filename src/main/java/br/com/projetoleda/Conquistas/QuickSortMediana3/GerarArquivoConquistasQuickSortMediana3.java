@@ -5,5 +5,7 @@ public class GerarArquivoConquistasQuickSortMediana3 {
         OrdenarConquistasQuickSortMediana3MedioCaso.gerarArquivo();
         OrdenarConquistasQuickSortMediana3MelhorCaso.gerarArquivo();
         OrdenarConquistasQuickSortMediana3PiorCaso.gerarArquivo();
+
+        System.out.println("Ordenação do campo conquistas usando o quick sort mediana de 3 concluída!");
     }
 }

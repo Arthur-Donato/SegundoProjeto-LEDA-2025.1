@@ -5,5 +5,7 @@ public class GerarArquivoConquistasHeapSort {
         OrdenarConquistasHeapSortMedioCaso.gerarArquivo();
         OrdenarConquistasHeapSortMelhorCaso.gerarArquivo();
         OrdenarConquistasHeapSortPiorCaso.gerarArquivo();
+
+        System.out.println("Ordenação do campo conquistas usando o heap sort concluída!");
     }
 }

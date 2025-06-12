@@ -5,5 +5,7 @@ public class GerarArquivosCountingSort {
         OrdenarConquistasCountingSortMedioCaso.gerarArquivo();
         OrdenarConquistasCountingSortMelhorCaso.gerarArquivo();
         OrdenarConquistasCountingSortPiorCaso.gerarArquivo();
+
+        System.out.println("Ordenação do campo conquistas usando o counting sort concluída!");
     }
 }

@@ -5,5 +5,7 @@ public class GerarArquivoConquistasInsertionSort {
         OrdenarConquistasInsertionSortMedioCaso.gerarArquivo();
         OrdenarConquistasInsertionSortMelhorCaso.gerarArquivo();
         OrdenarConquistasInsertionSortPiorCaso.gerarArquivo();
+
+        System.out.println("Ordenação do campo conquistas usando o insertion sort concluída!");
     }
 }

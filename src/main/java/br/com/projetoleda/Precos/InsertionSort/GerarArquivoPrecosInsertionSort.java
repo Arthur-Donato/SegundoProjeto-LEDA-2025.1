@@ -5,5 +5,7 @@ public class GerarArquivoPrecosInsertionSort {
         OrdenarPrecosInsertionSortMedioCaso.gerarArquivo();
         OrdenarPrecosInsertionSortMelhorCaso.gerarArquivo();
         OrdenarPrecosInsertionSortPiorCaso.gerarArquivo();
+
+        System.out.println("Ordenação do campo preço usando o insertion sort concluída!");
     }
 }

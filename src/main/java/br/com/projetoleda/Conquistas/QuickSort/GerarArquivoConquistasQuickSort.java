@@ -5,5 +5,7 @@ public class GerarArquivoConquistasQuickSort {
         OrdenarConquistasQuickSortMedioCaso.gerarArquivo();
         OrdenarConquistasQuickSortMelhorCaso.gerarArquivo();
         OrdenarConquistasQuickSortPiorCaso.gerarArquivo();
+
+        System.out.println("Ordenação do campo conquistas usando o quick sort concluída!");
     }
 }

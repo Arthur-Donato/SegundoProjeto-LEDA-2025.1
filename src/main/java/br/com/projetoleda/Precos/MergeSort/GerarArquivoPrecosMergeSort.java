@@ -5,5 +5,7 @@ public class GerarArquivoPrecosMergeSort {
         OrdenarPrecosMergeSortMedioCaso.gerarArquivo();
         OrdenarPrecosMergeSortMelhorCaso.gerarArquivo();
         OrdenarPrecosMergeSortPiorCaso.gerarArquivo();
+
+        System.out.println("Ordenação do campo preço usando o merge sort concluída!");
     }
 }

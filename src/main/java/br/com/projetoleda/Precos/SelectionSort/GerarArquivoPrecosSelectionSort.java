@@ -5,5 +5,7 @@ public class GerarArquivoPrecosSelectionSort {
         OrdenarPrecosSelectionSortMedioCaso.gerarArquivo();
         OrdenarPrecosSelectionSortMelhorCaso.gerarArquivo();
         OrdenarPrecosSelectionSortPiorCaso.gerarArquivo();
+
+        System.out.println("Ordenação do campo preço usando o selection sort concluída!");
     }
 }
