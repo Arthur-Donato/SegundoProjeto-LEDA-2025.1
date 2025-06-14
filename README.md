@@ -29,4 +29,6 @@ Este segundo projeto da disciplina de Laboratório de Estruturas de Dados tem a 
 
 ## 📋 Relatório do projeto
 Segue abaixo o link para o relatório realizado com base na análise do projeto.
+
+- [RelatórioProjeto.pdf](https://github.com/Arthur-Donato/Projeto2_LEDA-2025.1/blob/main/Relat%C3%B3rioProjeto.pdf)
  
