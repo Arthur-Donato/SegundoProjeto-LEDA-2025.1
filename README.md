@@ -7,11 +7,11 @@ Este segundo projeto da disciplina de Laboratório de Estruturas de Dados tem a 
 ### 1. Organização das pastas
 - Crie uma pasta principal com o nome que preferir;
 
-### 2. Clonagem / Exportação do projeto
-- Clone ou exporte esse projeto dentro da pasta criada anteriormente usando o comando "git clone https://github.com/Arthur-Donato/Projeto2_LEDA-2025.1" ou apenas extraindo o arquivo .zip;
+### 2. Exportação do projeto
+- Exporte esse projeto dentro da pasta criada anteriormente baixando e extrando o arquivo .zip para pasta criada;
 
 ### 3. Pasta Dados
-- Dentro da pasta "Projeto2_LEDA-2025.1" crie uma pasta chamada "Dados";
+- Dentro da pasta "Projeto2_LEDA-2025.1 - main" crie uma pasta chamada "Dados";
 
 ### 4. Arquivo CSV
 - Baixe o arquivo ".csv" fornecido no link (https://www.kaggle.com/datasets/fronkongames/steam-games-dataset);
